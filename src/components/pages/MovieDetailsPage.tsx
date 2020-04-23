@@ -67,7 +67,7 @@ const Main = styled.div`
   grid-gap: 1rem;
   max-width: ${Math.ceil(2*140/209*80)}vh;
   
-  grid-template-rows: max-content auto;
+  grid-template-rows: minmax(0px, max-content) auto;
   justify-content: space-around;
   grid-template-areas: "header  poster"
                        "details poster";

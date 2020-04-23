@@ -25,6 +25,9 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: 1.6vw;
     
+    @media(orientation: portrait) {
+      font-size: 1.6vh;
+    }
     @media(min-width: 1000px) {
       font-size: 16px;
     }
