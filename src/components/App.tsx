@@ -21,10 +21,26 @@ function App() {
 }
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    font-size: 1.6vw;
+    
+    @media(min-width: 1000px) {
+      font-size: 16px;
+    }
+  }
+  
   body {
     font-family: Roboto, sans-serif;
     background-color: #000;
-    color: gray;
+    color: lightgray;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
   }
 `;
 
