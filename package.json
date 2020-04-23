@@ -12,6 +12,7 @@
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
     "redux-loop": "^5.1.1",
+    "styled-components": "^5.1.0",
     "typescript": "~3.7.2"
   },
   "devDependencies": {
@@ -25,6 +26,7 @@
     "@types/react-redux": "^7.1.7",
     "@types/react-router": "^5.1.5",
     "@types/react-router-dom": "^5.1.4",
+    "@types/styled-components": "^5.1.0",
     "@types/webpack-env": "^1.15.1"
   },
   "scripts": {
