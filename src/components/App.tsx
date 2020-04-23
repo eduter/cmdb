@@ -4,13 +4,14 @@ import MovieCollectionPage from './pages/MovieCollectionPage';
 import MovieDetailsPage from './pages/MovieDetailsPage';
 import NotFoundPage from './pages/NotFoundPage';
 import { createGlobalStyle } from 'styled-components';
+import SiteHeader from './SiteHeader';
 
 
 function App() {
   return (
     <div>
       <GlobalStyle/>
-      <h1>Chris' Movie Collection</h1>
+      <SiteHeader/>
       <Switch>
         <Route exact path="/" component={MovieCollectionPage}/>
         <Route exact path="/movieDetails/:id" component={MovieDetailsPage}/>
