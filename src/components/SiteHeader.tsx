@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect, ConnectedProps } from 'react-redux';
-import { Dispatch } from 'redux';
-import { State } from '../store/types';
 import styled from 'styled-components';
+import { State } from '../store/types';
 
 
 interface SiteHeaderProps extends ConnectedProps<typeof connector> {
@@ -13,7 +12,7 @@ function SiteHeader({ isHomePage }: SiteHeaderProps) {
   return (
     <Header className={isHomePage ? 'home' : ''}>
       <span>Chris'</span>
-      Movie Collection
+      Movie DataBase
     </Header>
   );
 }
@@ -40,11 +39,7 @@ function mapStateToProps(state: State) {
   };
 }
 
-function mapDispatchToProps(dispatch: Dispatch) {
-  return {};
-}
-
-const connector = connect(mapStateToProps, mapDispatchToProps);
+const connector = connect(mapStateToProps);
 
 
 export default connector(SiteHeader);
