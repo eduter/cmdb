@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 import styled from 'styled-components';
-import { State } from '../store/types';
+import { RootState } from '../store/types';
 
 
 interface SiteHeaderProps extends ConnectedProps<typeof connector> {
@@ -18,6 +18,7 @@ function SiteHeader({ isHomePage }: SiteHeaderProps) {
 }
 
 const Header = styled.h1`
+  line-height: 1.3em;
   transition: font-size;
   transition-duration: 0.4s;
   color: white;
@@ -33,7 +34,7 @@ const Header = styled.h1`
   }
 `;
 
-function mapStateToProps(state: State) {
+function mapStateToProps(state: RootState) {
   return {
     isHomePage: state.router.location.pathname === '/'
   };

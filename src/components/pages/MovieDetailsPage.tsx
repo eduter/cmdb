@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { connect, ConnectedProps } from 'react-redux';
 import { RouteComponentProps } from 'react-router';
 import styled from 'styled-components';
-import { State } from '../../store/types';
+import { RootState } from '../../store/types';
 import { movies } from '../../movies';
 import NotFoundPage from './NotFoundPage';
 import { formatRuntime } from '../../utils/formatting';
@@ -115,7 +115,7 @@ interface MatchParams {
   id: string;
 }
 
-function mapStateToProps(state: State, { match }: RouteComponentProps<MatchParams>) {
+function mapStateToProps(state: RootState, { match }: RouteComponentProps<MatchParams>) {
   return {
     movie: movies.find(movie => movie.id === match.params.id)
   };

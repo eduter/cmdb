@@ -1,11 +1,13 @@
 import { connectRouter } from 'connected-react-router';
 import { History } from 'history';
 import { combineReducers } from 'redux-loop';
-import { State } from './types';
+import { RootState } from '../types';
+import filter from './filter';
 
 
 function createRootReducer(history: History) {
-  return combineReducers<State, any>({
+  return combineReducers<RootState, any>({
+    filter,
     router: connectRouter(history)
   });
 }
